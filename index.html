@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- jQuery cdn -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    #hole {
+      width: 200px;
+      height: 200px;
+      border-radius: 100px;
+      background-image: url(./F3bcmJDaYAAqGBX.jpg);
+      background-attachment: fixed;
+      position: fixed;
+      background-position: 50% 0%;
+      background-repeat: no-repeat;
+      /* background-size: cover; */
+      box-shadow: inset 0 0 100px 10px black;
+    }
+  </style>
+</head>
+<body>
+  <div style="width: 100%; height: 100%; background-color: black; position: fixed;"></div>
+  <div id="hole" style=""></div>
+  <script>
+    $(document).mousemove(function(e){
+      $('#hole').css('left', e.pageX - 100);
+      $('#hole').css('top', e.pageY - 100);
+    });
+  </script>
+</body>
+</html>
